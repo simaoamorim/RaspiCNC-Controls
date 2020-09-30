@@ -5,3 +5,4 @@
 [submodule "src/modules/xhc_receiver"]
 	path = src/modules/xhc_receiver
 	url = https://github.com/simaoamorim/xhc_receiver.git
+	branch = devel
