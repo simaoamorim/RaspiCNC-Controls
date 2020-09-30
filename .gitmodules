@@ -1,0 +1,7 @@
+[submodule "src/modules/SerialProgramLoader"]
+	path = src/modules/SerialProgramLoader
+	url = https://github.com/simaoamorim/SerialProgramLoader.git
+	branch = devel
+[submodule "src/modules/xhc_receiver"]
+	path = src/modules/xhc_receiver
+	url = https://github.com/simaoamorim/xhc_receiver.git
