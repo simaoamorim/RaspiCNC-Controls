@@ -36,7 +36,7 @@ def errored(error: QProcess.ProcessError):
     m = QMessageBox(
         QMessageBox.Critical,
         "Error",
-        error
+        error.__str__()
     )
     m.exec_()
     m.deleteLater()
