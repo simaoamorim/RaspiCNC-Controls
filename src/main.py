@@ -26,19 +26,20 @@ def finished():
             str(process.readAll(), "utf-8")
         )
         m.exec_()
+        m.deleteLater()
     process.deleteLater()
 
 
 @Slot()
 def errored(error: QProcess.ProcessError):
     mainwindow.setEnabled(True)
-    if process.exitCode() != 0:
-        m = QMessageBox(
-            QMessageBox.Critical,
-            "Error",
-            error
-        )
-        m.exec_()
+    m = QMessageBox(
+        QMessageBox.Critical,
+        "Error",
+        error
+    )
+    m.exec_()
+    m.deleteLater()
     process.deleteLater()
 
 
