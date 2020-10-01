@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-python3 modules/xhc_receiver/src/main.py /dev/ttyUSB0
+sudo python3 modules/xhc_receiver/src/main.py /dev/ttyUSB0
