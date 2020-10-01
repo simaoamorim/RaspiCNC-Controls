@@ -72,8 +72,8 @@ def startprogramloader():
 def startremotecontrol():
     global process, mainwindow
     qdir = QDir()
-    qdir.cd("./modules/xhc_receiver/src")
-    prepare_process("start_xhc.sh", [], qdir.path())
+    # qdir.cd("./modules/xhc_receiver/src")
+    prepare_process("bash", ["start_xhc.sh"], qdir.path())
     mainwindow.setDisabled(True)
     process.start()
 
