@@ -62,8 +62,8 @@ def prepare_process(
 def startprogramloader():
     global process, mainwindow
     qdir = QDir()
-    qdir.cd("./modules/SerialProgramLoader/src")
-    prepare_process("python3", ["main.py"], qdir.path())
+    # qdir.cd("./modules/SerialProgramLoader/src")
+    prepare_process("bash", ["start_loader.sh"], qdir.path())
     mainwindow.setDisabled(True)
     process.start()
 
