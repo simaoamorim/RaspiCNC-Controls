@@ -31,8 +31,15 @@ def finished():
 
 @Slot()
 def errored(error: QProcess.ProcessError):
-    print("ERROR: ", end='')
-    print(error)
+    mainwindow.setEnabled(True)
+    if process.exitCode() != 0:
+        m = QMessageBox(
+            QMessageBox.Critical,
+            "Error",
+            error
+        )
+        m.exec_()
+    process.deleteLater()
 
 
 def prepare_process(
