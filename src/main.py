@@ -55,7 +55,7 @@ def startprogramloader():
     global process, mainwindow
     qdir = QDir()
     qdir.cd("./modules/SerialProgramLoader/src")
-    prepare_process("python.exe", ["main.py"], qdir.path())
+    prepare_process("python", ["main.py"], qdir.path())
     mainwindow.setDisabled(True)
     process.start()
 
@@ -65,7 +65,7 @@ def startremotecontrol():
     global process, mainwindow
     qdir = QDir()
     qdir.cd("./modules/xhc_receiver/src")
-    prepare_process("cmd.exe", ["/C", "python.exe", "main.py", "COM1"], qdir.path())
+    prepare_process("bash", ["-c", "python.exe", "main.py", "/dev/ttyUSB0"], qdir.path())
     mainwindow.setDisabled(True)
     process.start()
 
