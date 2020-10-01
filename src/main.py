@@ -84,6 +84,6 @@ if __name__ == '__main__':
     mainwindow = MainWindow()
     mainwindow.ui.programLoaderButton.clicked.connect(startprogramloader)
     mainwindow.ui.remoteControlButton.clicked.connect(startremotecontrol)
-    mainwindow.show()
+    mainwindow.showMaximized()
 
     exit(app.exec_())
